@@ -4,12 +4,7 @@
 * */
 // import axios from 'axios'
 // import qs from 'qs'
-/*
-* 登录思路：
-* 登录的时候请求接口，接口此时返回状态200 token 用户信息 或者返回404 500
-* 这个时候我需要吧登录的token存起来
-*
-* */
+
 //声明常量
 const LOGIN ='LOGIN'
 const LOGOUT = 'LOGOUT'
