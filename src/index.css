@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+/*#root{*/
+  /*position: relative;*/
+  /*z-index: 1;*/
+/*}*/
+.allContent{
+  margin: 24px 16px;
+  padding: 24px 0;
+  background:#fff;
+  min-height: 280px;
+}
+.allHeader{
+  background: #fff;
+  padding: 0;
+}

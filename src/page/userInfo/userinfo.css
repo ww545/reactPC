@@ -1,0 +1,47 @@
+.userInfobox{
+    display: flex;
+}
+.leftUser{
+    width:224px;
+    flex:224px  0 0 ;
+    border-right:1px solid #e8e8e8;
+    height:100vh;
+}
+.leftUserUl{
+    padding-left:0;
+}
+.leftUserUl>li{
+    list-style: none;
+    height:40px;
+    line-height: 40px;
+    padding-left: 24px;
+    font-size:14px;
+    cursor: pointer;
+    margin:4px 0 8px 0;
+}
+
+.cilickLeftLi{
+    color:#1890ff;
+    border-right: 3px solid #1890ff;
+    background-color: #e6f7ff;
+    font-weight:900;
+}
+/*右侧侧边栏*/
+.rightUser{
+    padding: 8px 40px;
+    flex:1;
+    display: flex;
+}
+.rightSizeL{
+    flex:1;
+    max-width: 448px;
+    min-width: 224px;
+
+}
+.rightSizeR{
+    flex:0.5;
+    padding-left:100px;
+}
+.userInfobox .ant-form-item-required:before {
+    display: none;
+}

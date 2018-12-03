@@ -1,0 +1,22 @@
+.indexLogin {
+
+    height: 64px;
+    position: relative;
+    line-height: 64px;
+    padding-left: 24px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+    background: #002140;
+    overflow: hidden;
+}
+.indexLogin img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 32px;
+}
+.indexLogin span{
+    color:#fff;
+    vertical-align: middle;
+    padding-left: 10px;
+    font-size:1.7em;
+}
