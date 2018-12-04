@@ -1,3 +1,9 @@
+这个作品未完全成型，这个练手作品需要打包上线，部署线上环境，
+虚拟主机无法达到node需求。
+暂时不打算深入php，
+所以使用了mock数据，作为展示吧
+这个作品主要是展示了自己对react的一些生态的运用。并不是很棒。
+
 # **绑定 - 接口**
 > **URL:** [BaseUrl/binding](BaseUrl/binding)
 >
@@ -13,61 +19,3 @@
 | roomNum     | number     | 绑定 - 房间值                                                 |   true        |                      |
 
 
-模拟数据格式
-```json
-{
-    "rlt": "true",
-    "msg": "ok",
-    "data": [
-        {
-            "text": "建筑物名称",
-            "value": 1,
-            "floorArr": [
-                {
-                    "floorNum": 24,
-                    "text": "24楼",
-                    "value": 10,
-                    "roomArr": [
-                        {
-                            "roomNum": 8,
-                            "text": "2408室",
-                            "value": 12
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
-
-### 说明:
-
-* `data`数组中的对象为 **建筑物**对象( 有几个建筑物, 输出多少对象 )
-* `floorArr`数组中的对象为 **楼层**对象
-* `roomArr`数组中的对象为 **房间**对象 
-
-***
-
-# **绑定请求 - 接口**
-> **URL:** [BaseUrl/bindingRequire](BaseUrl/bindingRequire)
-
-| 参数名称          | 类型        | 描述               |  可否为空  |
-| --------          | -----:     | -----:             | :----:    |
-| buildingValue     | number     | 建筑物value        |   false   |
-| floorValue        | number     | 楼层value          |   false   |
-| roomValue         | number     | 房间value          |   false   |
-| companyNo         | number     | 公司编号唯一value   |   false   |
-
-| 属性名称     | 类型       | 描述                  |  可否动态数据 |   静态值        |
-| --------    | -----:     | -----:                | :----:       |   :----:       |
-| data        | boolean    | 绑定请求 - 返回结果    |   true       |   true / false  |
-
-模拟数据格式
-```json
-{
-    "rlt": "true",
-    "msg": "ok",
-    "data": true
-}
-```
