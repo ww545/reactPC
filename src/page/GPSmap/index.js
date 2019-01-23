@@ -29,6 +29,8 @@ const randomMarker = (len) => (
 );
 
 
+ //121.339157,31.516552
+// { longitude:121.339157, latitude: 31.516552 }
 
  class Maps extends React.Component{
     constructor(props){
@@ -37,6 +39,7 @@ const randomMarker = (len) => (
         this.state = {
             useCluster: false,
             markers: randomMarker(10),
+            center:{ longitude: 117.594807, latitude: 34.867248  }
         };
 
 
@@ -65,6 +68,7 @@ const randomMarker = (len) => (
                  <Map
                      amapkey={'37b37a5bc4b667d9cc201a27a7e18d8f'}
                      zoom={12}
+                     center={this.state.center}
                  >
                      <Markers
                          events={this.markerEvents}

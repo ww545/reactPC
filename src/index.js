@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router } from 'react-router-dom';
+import {BrowserRouter } from 'react-router-dom';
 import { createStore,applyMiddleware,compose } from 'redux'
 import thunk from 'redux-thunk'
 import {Provider} from 'react-redux'
@@ -16,9 +16,9 @@ const store = createStore(Reduecer,compose(
 ));
 ReactDOM.render(
     (<Provider store={store}>
-    <Router>
+    <BrowserRouter >
         <Routes></Routes>
-    </Router>
+    </BrowserRouter >
     </Provider>),
     document.getElementById('root'));
 serviceWorker.unregister();

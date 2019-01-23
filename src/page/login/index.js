@@ -14,17 +14,14 @@ const FormItem = Form.Item;
  class Login extends React.Component{
      handleSubmit = (e) => {
 
-         console.log(this.props.form.validateFields)
          this.props.login(e)
          e.preventDefault();
          this.props.form.validateFields((err, values) => {
-
-             console.log(err)
              if (!err) {
                  if(values.userName==="admin"){
                  //   跳转到权限页面存储type
+                     localStorage.setItem("user","admin")
                      this.props.history.push('/admin');
-                     console.log(this.props)
                  }
 
                  console.log('Received values of form: ', values);

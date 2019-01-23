@@ -1,24 +1,21 @@
-import React from 'react';
+import React ,{Fragment} from 'react';
 import { Route , Switch,Redirect } from 'react-router-dom';
 
 import Login from '../page/login/index'
 import Auth from '../page/auth/index'
+import Admin from '../page/home/admin'
 
-/*
-* 构建思路
-* 登录页面只有1个
-* 主页面有一个，但是主页面分不同等级 1,2,3个等级
-* 分别跳转到不同文件夹下的Home文件这样就需要统一验证来判断跳转
-*
-* */
 export default class Router extends React.Component{
     render(){
         return(
+            <Fragment>
+                <Auth />
                 <Switch>
-                    <Route path='/'   component={Auth} />
-                    <Route path='/login'   component={Login} />
-                    <Redirect to='/admin'/>
+                    <Redirect exact from="/" to="/admin"></Redirect>
+                    <Route   path='/admin'   component={Admin} />
+                    <Route  path='/login'   component={Login} />
                 </Switch>
+             </Fragment>
         )
     }
 }

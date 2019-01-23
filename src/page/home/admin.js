@@ -3,7 +3,7 @@ import Rich from '../../content/lside/index'
 import Head from '../../content/header/index'
 import { Route , Switch,withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
-
+import Cen from './content'
 import Chart from '../charts/index'
 import Richs from '../rich/index'
 import Permission from '../Permission/index'
@@ -22,7 +22,7 @@ const menuName = [
             {
                 "key": "导航1",
                 "text": "导航1",
-                "links": "/"
+                "links": "/admin"
             }
         ]
     },
@@ -59,8 +59,14 @@ class Admin extends React.Component{
     constructor(props){
         super(props)
     }
+    componentDidMount(){
+        if(  localStorage.getItem("user")!=="admin"){
+            this.props.history.push('/login');
+            return null
+        }
+    }
     render(){
-
+console.log(this.props)
         return(
             <div>
                 <Layout>
@@ -69,7 +75,7 @@ class Admin extends React.Component{
                         <Header className="allHeader">  <Head></Head></Header>
                         <Content  className="allContent">
                             <Switch>
-                                <Route  path="/"  exact component={Chart}/>
+                                <Route  path="/admin/" exact   component={Chart}/>
                                 <Route path="/admin/map" component={MAPS}/>
                                 <Route path="/admin/permission" component={Permission}/>
                                 <Route path="/admin/rich" component={Richs}/>
