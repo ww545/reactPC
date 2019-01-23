@@ -63,3 +63,30 @@
 .bgfoter span{
     padding-left:10px;
 }
+@media only screen and (max-width: 500px) {
+    .leftText{
+        flex: 7 1;
+        line-height: 1.4;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+        position: absolute;
+        top:10%;
+    }
+    .bgImg{
+        height:100vh;
+    }
+    .bgImg .contents{
+        background:#fff;
+        position: fixed;
+        top:50%;
+        right:0%;
+        left:50%;
+        bottom:0%;
+        margin-top:-160px;
+        margin-left:-150px;
+        height: 370px;
+        padding: 30px 10px ;
+        width:300px;
+    }
+}
