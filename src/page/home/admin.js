@@ -3,7 +3,6 @@ import Rich from '../../content/lside/index'
 import Head from '../../content/header/index'
 import { Route , Switch,withRouter } from 'react-router-dom';
 import { Layout } from 'antd';
-import Cen from './content'
 import Chart from '../charts/index'
 import Richs from '../rich/index'
 import Permission from '../Permission/index'
